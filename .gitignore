@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
+.ipynb_checkpoints/
+# Sonuçlar: klasör kalsın, içindeki büyük dosyalar repoya girmesin
+results/*
+!results/.gitkeep
+runs/
+*.pt
+*.pth
+*.gif
+.DS_Store

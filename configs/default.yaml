@@ -1,0 +1,22 @@
+# Ortak ayarlar. Tüm algoritmalar aynı ortam ve aynı eğitim bütçesiyle çalışır.
+env:
+  name: CartPole-v1        # Ortam hazır olunca Explore-v0 yapın
+  max_episode_steps: 500
+
+train:
+  total_steps: 100000      # Adil karşılaştırma için bütçe ORTAM ADIMI ile ölçülür
+  log_every_episodes: 10
+  seeds: [0, 1, 2, 3, 4]   # Final deneylerde 5 seed
+
+eval:
+  episodes: 100
+  map_seeds_start: 1000    # Sabit test seti: 1000..1099
+  map_seeds_count: 100
+
+# Algoritmaya özel ayarlar: her kişi kendi bölümünü doldurur
+agents:
+  random: {}
+  ddqn: {}   # Kişi 1
+  a2c: {}    # Kişi 2
+  ppo: {}    # Kişi 3
+  sac: {}    # Kişi 4
